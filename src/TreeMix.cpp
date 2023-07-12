@@ -41,7 +41,7 @@ void printopts() {
     cout << "-cor_mig [file] List of known migration events to include (also use -climb)\n";
     cout << "-noss Turn off sample size correction\n";
     cout << "-seed [int] Set the seed for random number generation\n";
-    cout << "-n_warn [int] Display first N warnings\n"; 
+    cout << "-n_warn [int] Display first N warnings\n";
     // Start of additions by EKM
     cout << "\nOptions added for OrientAGraph:\n";
     cout << "-freq2stat Estimate covariances or f2-statistics from allele frequencies\n"
@@ -358,7 +358,7 @@ int main(int argc, char *argv[]){
     }
 
     //print the starting likelihood (after tree building)
-    likout << "Starting ln(likelihood) with "<< state.get_nmig() <<" migration events: "<< state.llik() << " \n";
+    likout << "Starting ln(likelihood) with "<< state.get_nmig() <<" migration events: "<< state.llik() << "\n";
     if (p.dotarget)	state.target_pop();
     if (p.climb) state.iterate_all_hillclimb();
     for (int i = 0; i < p.nmig; i++){
